@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp4.MainPage"
+             Title="Kalkulačka">
+
+    <ScrollView>
+        <Grid
+            RowSpacing="6"
+            ColumnSpacing="6"
+            >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>                <!--0-->
+                <RowDefinition Height="50"/>                <!--1-->
+                <RowDefinition Height="50"/>                <!--2-->
+                <RowDefinition Height="50"/>                <!--3-->
+                <RowDefinition Height="50"/>                <!--4-->
+                <RowDefinition Height="50"/>                <!--5-->
+                <RowDefinition Height="50"/>                <!--6-->
+                <RowDefinition Height="50"/>               <!--7-->
+                <RowDefinition Height="50"/>               <!--8-->
+                <RowDefinition Height="50"/>               <!--9-->
+                <RowDefinition Height="50"/>               <!--10-->
+                <RowDefinition Height="50"/>               <!--11-->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="Bt_show"
+                    Text="Další"
+                    Grid.ColumnSpan="2"
+                    Clicked="Bt_show_Clicked"
+            />
+            
+            <Entry 
+                    x:Name="Procento1"
+                    Grid.Row="1"
+                    Placeholder="Procento 1. alkoholu:"
+            />
+
+            <Entry 
+                    x:Name="Objem1"
+                    Placeholder="Objem 1. alkoholu:"
+                    Grid.Row="1"
+                    Grid.Column="1"
+            />
+
+            <Entry 
+                    x:Name="Procento2"
+                    Placeholder="Procento 2. alkoholu:"
+                    IsVisible="false"
+                    Grid.Row="2"
+            />
+
+            <Entry 
+                    x:Name="Objem2"
+                    Placeholder="Objem 2. alkoholu:"
+                    IsVisible="false"
+                    Grid.Row="2"
+                    Grid.Column="1"
+            />
+
+            <Entry 
+                    x:Name="Procento3"
+                    Placeholder="Procento 3. alkoholu:"
+                    IsVisible="false"
+                    Grid.Row="3"
+            />
+
+            <Entry 
+                    x:Name="Objem3"
+                    Placeholder="Objem 3. alkoholu:"
+                    IsVisible="false"
+                    Grid.Row="3"
+                    Grid.Column="1"
+            />
+
+            <Entry 
+                    x:Name="Procento4"
+                    Placeholder="Procento 4. alkoholu:"
+                    IsVisible="false"
+                    Grid.Row="4"
+            />
+
+            <Entry 
+                    x:Name="Objem4"
+                    Placeholder="Objem 4. alkoholu:"
+                    IsVisible="false"
+                    Grid.Row="4"
+                    Grid.Column="1"
+            />
+
+            <Entry 
+                    x:Name="Procento5"
+                    Placeholder="Procento 5. alkoholu:"
+                    IsVisible="false"
+                    Grid.Row="5"
+            />
+
+            <Entry 
+                    x:Name="Objem5"
+                    Placeholder="Objem 5. alkoholu:"
+                    IsVisible="false"
+                    Grid.Row="5"
+                    Grid.Column="1"
+            />
+            
+            <!--......................................................................-->
+
+            <Button
+                x:Name="Bt_man"
+                Text="Muž"
+                Clicked="Bt_man_Clicked"
+                Grid.Row="2"
+                Grid.Column="0"
+                
+                />
+            
+            <Button
+                x:Name="Bt_woman"
+                Text="Žena"
+                Clicked="Bt_woman_Clicked"
+                Grid.Row="2"
+                Grid.Column="1"
+                
+                />
+
+            <Entry
+                x:Name = "Entry_weight"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Placeholder="Váha:"        
+                />
+
+            <Button
+                x:Name="Bt_vysledek"
+                Text="Vypočítej"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Clicked="Bt_vysledek_Clicked"/>
+            
+            <!--..............................ČAS..............................-->
+
+            <Button
+                x:Name="Time_now"
+                Text=""
+                Clicked="Time_now_Clicked"  
+                Grid.Row="4"
+                Grid.Column="0"
+            />
+
+            <Button
+                x:Name="Time"
+                Text="Konec pití"
+                Clicked="Time_Clicked"
+                Grid.Row="4"
+                Grid.Column="1"
+            />
+
+            <Entry
+                x:Name="Entry_time"
+                Placeholder="xx:yy"
+                IsVisible="false"
+                Grid.Row="4"
+                Grid.Column="1"
+                IsEnabled="False"
+            />
+
+            <!--...............................Výsledky...........................-->
+
+            <Border 
+                x:Name="Border_Promile"
+                Grid.Row="6"
+                Grid.Column="0"
+                IsVisible="false"
+                BackgroundColor="Green"
+                >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20,20,20,20" />
+                </Border.StrokeShape>
+            <Label
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                x:Name="Label_Promile"
+                TextColor="White"
+                Text="lol"
+                FontSize="40"
+                Grid.Row="20"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+               
+            />
+            </Border>
+
+            <Border 
+                x:Name="Border_konec"
+                Grid.Row="6"
+                IsVisible="false"
+                Grid.Column="1"
+                BackgroundColor="Green"
+               >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20,20,20,20" />
+                </Border.StrokeShape>
+            
+                <Label
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"
+                    x:Name="Label_konec"
+                    Text="gg"
+                    FontSize="20"
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                  
+                />
+            </Border>
+
+            <Button
+                x:Name="Bt_new"
+                Text="Nový výpočet"
+                Clicked="Bt_new_Clicked"
+                IsVisible="false"
+                Grid.Row="7"
+                Grid.ColumnSpan="2"
+                />
+
+
+
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp4.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp4"
+    xmlns:mypages="clr-namespace:MauiApp4.Pages"
+    xmlns:controls="clr-namespace:MauiApp4.Controls"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutBackgroundColor="Grey">
+
+    <Shell.FlyoutHeader>
+        <controls:Header/>
+    </Shell.FlyoutHeader>
+    
+    <ShellContent
+        Title="Kalkulačka"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage"/>
+
+    <ShellContent
+        Title="Jak moc jsem opilí hra"
+        ContentTemplate="{DataTemplate mypages:Page1}"
+        Route="Page1"/>
+
+    <Shell.FlyoutFooter>
+        <controls:Footer/>
+    </Shell.FlyoutFooter>
+    
+</Shell>

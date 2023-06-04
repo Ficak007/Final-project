@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp4.Pages.Page1"
+             Title="Hra"
+             BackgroundColor="White">
+    <ScrollView>
+    <VerticalStackLayout>
+        <Grid
+            RowSpacing="6"
+            ColumnSpacing="6"
+            >
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="145"/>
+                <RowDefinition Height="145"/>
+                <RowDefinition Height="145"/>
+                <RowDefinition Height="145"/>
+                <RowDefinition Height="145"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+                                
+            <Image Source="pivo.jpg"
+                   x:Name="Beer1"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   IsVisible="false"
+                   
+            />
+
+            <Image Source="pivo.jpg"
+                   x:Name="Beer2"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   IsVisible="false"
+            />
+
+            <Image Source="pivo.jpg"
+                   x:Name="Beer3"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   IsVisible="false"
+            />
+
+            <Image Source="pivo.jpg"
+                   x:Name="Beer4"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   IsVisible="false"
+                   
+            />
+
+            <Image Source="pivo.jpg"
+                   x:Name="Beer5"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   IsVisible="false"
+            />
+
+            <Image Source="pivo.jpg"
+                   x:Name="Beer6"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Grid.Row="2"
+                   Grid.Column="2"
+                   IsVisible="false"
+            />
+
+            <Image Source="pivo.jpg"
+                   x:Name="Beer7"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   IsVisible="false"
+                   
+            />
+
+            <Image Source="pivo.jpg"
+                   x:Name="Beer8"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   IsVisible="false"
+            />
+
+            <Image Source="pivo.jpg"
+                   x:Name="Beer9"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Grid.Row="3"
+                   Grid.Column="2"
+                   IsVisible="false"
+            />
+
+            <!--...................................................-->
+
+            <Border Grid.Row="4"
+                Grid.Column="0"
+                >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="40,0,0,0" />
+                </Border.StrokeShape>
+                <Button
+                x:Name="Bt_new_game"
+                TextColor="White"
+                Text="Nová hra"
+                IsEnabled="True"
+                FontSize="20"
+                BackgroundColor="DarkOrange"
+                Clicked="Bt_new_game_Clicked"
+            />
+            </Border>
+
+
+            <Entry 
+                x:Name="Entry_number"
+                PlaceholderColor="White"
+                TextColor="White"
+                FontSize="15"
+                BackgroundColor="DarkOrange"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Placeholder="Kolik piv vidíte?"
+                Grid.Row="4"
+                Grid.Column="1"
+            />
+
+            <Border Grid.Row="4"
+                Grid.Column="2"
+                >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,40,0,0" />
+                </Border.StrokeShape>
+
+                <Button
+                x:Name="Bt_submit"
+                IsEnabled="False"
+                TextColor="White"
+                FontSize="20"
+                BackgroundColor="DarkOrange"
+                Text="Potvrdit"
+                Clicked="Bt_submit_Clicked"
+            />
+            </Border>
+
+            <Border Grid.Row="0"
+                Grid.Column="0"
+                >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,0,40,0" />
+                </Border.StrokeShape>
+            <Label
+                x:Name="Lb_win"
+                Text="0"
+                TextColor="White"
+                FontSize="50"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                BackgroundColor="Green"
+            />
+                </Border>
+            <Border Grid.Row="0"
+                Grid.Column="2"
+                >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,0,0,40" />
+                </Border.StrokeShape>
+            
+            <Label
+                x:Name="Lb_lose"
+                Text="0"
+                TextColor="White"
+                FontSize="50"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                BackgroundColor="Red"
+            />
+            </Border>
+            <Border
+                Padding="5"
+                Grid.Row="0"
+                Grid.Column="1"
+                BackgroundColor="White"
+                >
+                <Label
+                Text="Podle toho kolik piv uvidíte, mužete odvodit míru vaší opilosti"
+                TextColor="Black"        
+                VerticalTextAlignment="Center"
+                HorizontalOptions="Center"              
+            />
+            </Border>
+        </Grid>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
